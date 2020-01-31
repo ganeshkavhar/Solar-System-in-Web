@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Galaxy</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    <!--
+        Creator of this Solar System:
+            💚 Ganesh Kavhar  🍏
+            
+        Follow me for more amazing codes :)
+        
+        If you like my code, pleade Upvote.⏫
+        
+        ✨Important✨
+        
+        Planets that sustain life: 
+            Temperature between -10°C and 35°C
+            
+        Distance from Sun for life: 
+            98.25 - 100.5
+        
+        Info:
+            Tap a Planet to see its info.
+            Tap "New" to add new Planets.
+            Tap "Settings" to:
+                Resize everything.
+                Delete all created planets.
+                Write a color and press enter to change the color of the Stars.
+                
+            Surprise:
+                Scale the Solar Systen to *almost* 0 to discover something...Big  :)
+    -->
+        <div id ="solarSystem">
+            <div id = "Sun"></div>
+        </div>
+        
+        <button id = "t" onclick = "newPlanetSettings()" >New <i class="fa fa-globe"></i></button>
+        <button id = "t2" onclick="openSettings()">Settings- </button>
+        
+        <div id = "modal">
+            <div id = "newPlanets">
+                <input type = number id = "size" placeholder = "Distance from Sun">
+                <input type = number id = "speed" placeholder = "Seconds / Rotation">
+                <input type = number id = "planetSize" placeholder = "Size of the Planet">
+                <input type = text id = "name" placeholder = "Planet Name">
+                <input type = color id = "color" value = "#553311" placeholder = "Planet color">
+                <button id = "makeNewPlanet" onclick = "newGuy()">Create</button>
+                <button onclick = " randomPlanet()" id = "random">Random</button>
+                <button onclick = " newPlanetSettings()" id = "closePlanetSettings">Close</button>
+            </div>
+        </div>
+        
+        <div id = "settings">
+            <div id = "settingsPage">
+                <h3>Space View</h3>
+                <input oninput = scales() type = range id = "scale" max = 200 min = 0 value = 100>
+                <input type = "text" placeholder = " Stars color" value ="white" id ="stars">
+                <button id = "button1" onclick = deleteStars()>Delete all placed Planets</button>
+                <button onclick="openSettings()" id ="button2">Close</button>
+            </div>
+        </div>
+        
+        <div id = "planetInfo">
+            <div id = 'colorOfPlanet'></div>
+            <p id = "nameOfPlanet">Planet name: </p>
+            <p id = "sizeOfPlanet">Planet size: </p>
+            <p id = "populationOfPlanet">Population: 0</p>
+            <p id = "rotationOfPlanet">Rotation time: </p>
+            <p id = "distanceOfPlanet">Distance from Sun:</p>
+            <p id = "temperatureOfPlanet">Temperature: </p>
+            <button onclick ="closePlanetsInfo()" id="closePlanetsInfo">X</button>
+        </div>
+    </body>
+</html>
